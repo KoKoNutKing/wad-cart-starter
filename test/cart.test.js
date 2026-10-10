@@ -33,9 +33,14 @@ test('throws RangeError for a negative price', () => {
   assert.throws(() => cartTotal(items, {}), RangeError)
 })
 
-test('throws RangeError for a non-positive integer quantity', () => {
-  for (const qty of [0, -1, 1.5]) {
-    const items = [{ name: 'Item', price: 10, qty }]
-    assert.throws(() => cartTotal(items, {}), RangeError)
-  }
+test('throws RangeError for a zero quantity', () => {
+  assert.throws(() => cartTotal([{ name: 'Item', price: 10, qty: 0 }], {}), RangeError)
+})
+
+test('throws RangeError for a negative quantity', () => {
+  assert.throws(() => cartTotal([{ name: 'Item', price: 10, qty: -1 }], {}), RangeError)
+})
+
+test('throws RangeError for a fractional quantity', () => {
+  assert.throws(() => cartTotal([{ name: 'Item', price: 10, qty: 1.5 }], {}), RangeError)
 })
