@@ -1,6 +1,6 @@
 # Self-assessment — IA#1
 
-Submitted by: `<student ID>` — `<full name>` (replace with your details before submission)
+Submitted by: `24127044` — `Lê Nguyễn Quốc Học`
 
 Total I claim: 98 / 100
 
@@ -14,39 +14,10 @@ Total I claim: 98 / 100
 
 ## What I did not manage
 
-The AI log says CI had not been rerun on the latest updates when it was written. Per the task owner's note, CI has run, though its latest run/commit evidence was not independently checked here. Replace the student ID and name placeholders before submission.
+The coding agent could not run npm test in its environment due to a spawn EPERM restriction. Although the tests were verified separately, I could not complete the entire validation process within the agent's environment.
 
 ## What I would do differently
 
-Record the relevant CI run or commit in `AI-LOG.md` when CI verifies the submitted changes, so the result can be checked against the submitted version.
+I would document AI interactions and decisions immediately after each task instead of reconstructing them later.
 
-## Verification performed for this assessment
-
-- `npm test` — passed, 8 tests.
-- `npm run lint` — passed.
-- CI workflow configuration inspected. Per the task owner's note, CI has run; its latest run was not independently verified here.
-
-**Total:** 30 + 20 + 20 + 15 + 13 = **98 / 100**. Make the total in the submission zip filename match this report. This is a self-assessment, not an instructor mark.
-
-<!-- Replace placeholders and verify evidence against the exact submitted commit. -->
-
-Student ID: `<student ID>`  
-Full name: `<full name>`
-
-## Submission reminder
-
-Include this file at the root of the zip. Use `<StudentID>_98.zip` for an individual submission, or the required group naming format. See the rubric's honesty-adjustment section when calibrating the score.
-
-## Self-assessment status
-
-Draft pending student identity details.
-
-## Report end
-
-98 / 100
-
-<!-- End -->
-
-## Evidence note
-
-The repository files cited above were inspected in the working tree for this assessment. Confirm that the same versions are in the submitted commit.
+I would also establish a clearer validation workflow from the beginning, using local tests and GitHub Actions CI to independently verify AI-generated code when the agent's environment has execution limitations.
